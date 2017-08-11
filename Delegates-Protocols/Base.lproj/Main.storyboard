@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Base Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BaseController" customModule="Delegates_Protocols" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,120 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="Rmn-Oo-aie">
+                                <rect key="frame" x="19" y="69" width="336" height="181"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1js-oE-wi8">
+                                <rect key="frame" x="106" y="497" width="163" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.16415748413980769" green="0.24631595519821936" blue="0.4156617802126904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Choose Your Team">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseTeamButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sOI-hq-CVQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5G-dE-TVP">
+                                <rect key="frame" x="19" y="329" width="336" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23921568630000001" green="0.35686274509999999" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="chooseTeamButton" destination="1js-oE-wi8" id="1Oa-Dg-ywZ"/>
+                        <outlet property="mainImageView" destination="Rmn-Oo-aie" id="zbz-xE-eh6"/>
+                        <outlet property="nameLabel" destination="C5G-dE-TVP" id="Dx8-Dg-aGx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="68" y="-9.4452773613193415"/>
+        </scene>
+        <!--Selection View Controller-->
+        <scene sceneID="32d-17-5eF">
+            <objects>
+                <viewController storyboardIdentifier="SelectionView" id="JHu-a0-AcP" customClass="SelectionViewController" customModule="Delegates_Protocols" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mHn-tZ-Row"/>
+                        <viewControllerLayoutGuide type="bottom" id="HE2-XZ-uX1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gnq-Q4-uUI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoH-mP-D7o">
+                                <rect key="frame" x="152" y="295" width="70" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="NBe-Cd-TKa"/>
+                                    <constraint firstAttribute="height" constant="76" id="VBp-dX-DMO"/>
+                                </constraints>
+                                <state key="normal" image="teamMystic"/>
+                                <connections>
+                                    <action selector="teamMysticButtonSelected:" destination="JHu-a0-AcP" eventType="touchUpInside" id="19V-uq-b0P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsm-Kf-tan">
+                                <rect key="frame" x="152" y="412" width="70" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="aON-9O-4mH"/>
+                                    <constraint firstAttribute="width" constant="70" id="kTO-7x-MhM"/>
+                                </constraints>
+                                <state key="normal" image="teamValor"/>
+                                <connections>
+                                    <action selector="teamValorButtonSelected:" destination="JHu-a0-AcP" eventType="touchUpInside" id="xX7-Dq-jgs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVE-1e-Pnu">
+                                <rect key="frame" x="152" y="179" width="70" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="8uZ-CB-V0b"/>
+                                    <constraint firstAttribute="height" constant="76" id="eNa-A7-kHI"/>
+                                </constraints>
+                                <state key="normal" image="teamInstinct"/>
+                                <connections>
+                                    <action selector="teamInstinctButtonSelected:" destination="JHu-a0-AcP" eventType="touchUpInside" id="pul-ZZ-zpl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIq-Of-X4y">
+                                <rect key="frame" x="16" y="101" width="343" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="BJA-MS-aSO"/>
+                                    <constraint firstAttribute="height" constant="36" id="Q4z-pS-cjj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23921568630000001" green="0.35686274509999999" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YoH-mP-D7o" firstAttribute="centerX" secondItem="Gnq-Q4-uUI" secondAttribute="centerX" id="Abz-NI-853"/>
+                            <constraint firstItem="Qsm-Kf-tan" firstAttribute="centerX" secondItem="Gnq-Q4-uUI" secondAttribute="centerX" id="Nh8-6I-opd"/>
+                            <constraint firstItem="YoH-mP-D7o" firstAttribute="centerY" secondItem="Gnq-Q4-uUI" secondAttribute="centerY" id="Sd7-kt-YUD"/>
+                            <constraint firstItem="Qsm-Kf-tan" firstAttribute="centerY" secondItem="Gnq-Q4-uUI" secondAttribute="centerY" constant="116.5" id="gyD-gw-czO"/>
+                            <constraint firstItem="zVE-1e-Pnu" firstAttribute="centerY" secondItem="Gnq-Q4-uUI" secondAttribute="centerY" constant="-116.5" id="p4a-0M-kNJ"/>
+                            <constraint firstItem="zVE-1e-Pnu" firstAttribute="top" secondItem="oIq-Of-X4y" secondAttribute="bottom" constant="42" id="tZC-hk-06V"/>
+                            <constraint firstItem="zVE-1e-Pnu" firstAttribute="centerX" secondItem="Gnq-Q4-uUI" secondAttribute="centerX" id="wHF-vJ-4m8"/>
+                            <constraint firstItem="oIq-Of-X4y" firstAttribute="centerX" secondItem="Gnq-Q4-uUI" secondAttribute="centerX" id="zvt-9f-9dx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jWW-Kp-mvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="735.20000000000005" y="-8.5457271364317844"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pokemon" width="608" height="370"/>
+        <image name="teamInstinct" width="70" height="76"/>
+        <image name="teamMystic" width="70" height="76"/>
+        <image name="teamValor" width="70" height="76"/>
+    </resources>
 </document>
