@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E25EDBD41F3D343D00391C79 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EDBD31F3D343D00391C79 /* SelectionViewController.swift */; };
 		E25EDBD81F3D37BA00391C79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25EDBD71F3D37BA00391C79 /* Assets.xcassets */; };
+		E28A85DD1F3D470100202CAD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E28A85DC1F3D470100202CAD /* README.md */; };
 		E2D9E56F1F3D30F500B69E01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D9E56E1F3D30F500B69E01 /* AppDelegate.swift */; };
 		E2D9E5711F3D30F500B69E01 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D9E5701F3D30F500B69E01 /* BaseController.swift */; };
 		E2D9E5741F3D30F500B69E01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D9E5721F3D30F500B69E01 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		E25EDBD31F3D343D00391C79 /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		E25EDBD71F3D37BA00391C79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E28A85DC1F3D470100202CAD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E2D9E56B1F3D30F500B69E01 /* Delegates-Protocols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Delegates-Protocols.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D9E56E1F3D30F500B69E01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2D9E5701F3D30F500B69E01 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 		E2D9E5621F3D30F500B69E01 = {
 			isa = PBXGroup;
 			children = (
+				E28A85DC1F3D470100202CAD /* README.md */,
 				E2D9E56D1F3D30F500B69E01 /* Delegates-Protocols */,
 				E2D9E56C1F3D30F500B69E01 /* Products */,
 			);
@@ -146,6 +149,7 @@
 			files = (
 				E2D9E5711F3D30F500B69E01 /* BaseController.swift in Sources */,
 				E25EDBD41F3D343D00391C79 /* SelectionViewController.swift in Sources */,
+				E28A85DD1F3D470100202CAD /* README.md in Sources */,
 				E2D9E56F1F3D30F500B69E01 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
